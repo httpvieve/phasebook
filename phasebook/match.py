@@ -20,8 +20,14 @@ def match(match_id):
 
 
 def is_match(fave_numbers_1, fave_numbers_2):
-    for number in fave_numbers_2:
-        if number not in fave_numbers_1:
-            return False
+            
+    min_count = len(fave_numbers_2);
+    complement = list(set(fave_numbers_1) & set(fave_numbers_2))
+    if (min_count == complement):
+        return True
+    return False
 
-    return True
+    # for number in fave_numbers_2:
+    #     if number not in fave_numbers_1:
+    #         return False
+    # return True
